@@ -1,0 +1,14 @@
+  <table *ngFor="let dt of data" border="1">
+    <tr>
+      <th></th>
+      <th >{{dt['date']}}</th>
+    </tr>
+    <tr>
+      <td>Open</td>
+      <td [ngClass]="{'color': dt['open'] > dt['close'] ? 'green':'red'}">{{dt['open']}}</td>
+    </tr>
+    <tr>
+      <td>Close</td>
+      <td [ngClass]="{'color': dt['close'] > dt['open'] ? 'red':'green'}">{{dt['close']}}</td>
+    </tr>
+  </table>
